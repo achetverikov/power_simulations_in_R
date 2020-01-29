@@ -3,12 +3,13 @@ title: "Tutorial on statistical power analysis via simulations in R"
 author: Andrey Chetverikov
 date: January 28, 2020
 output:
-  pdf_document: default
+  html_document:
+    df_print: paged
+    keep_md: true
   word_document:
     fig_height: 12
     fig_width: 12
-  html_document:
-    df_print: paged
+  pdf_document: default
 editor_options:
   chunk_output_type: console
 ---

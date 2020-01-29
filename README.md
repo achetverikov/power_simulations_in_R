@@ -1,2 +1,3 @@
-# power_simulations_in_R
-Short tutorial for power analysis via simulations in R
+# Short tutorial for power analysis via simulations in R
+
+This tutorial was initially run at the graduate school for Russian cognitive science students, TCTS GRAДSCHOOL 2020 (https://osf.io/rshwm/), in St. Petersburg, Russia. The goal was to give a short intro into simulations with an emphasis on power simulations. There are examples for simple t-tests and ANOVAs and less simple within-subject ANOVAs as well as some practical exercises. 

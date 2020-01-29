@@ -3,12 +3,12 @@ title: "Tutorial on statistical power analysis via simulations in R"
 author: Andrey Chetverikov
 date: January 28, 2020
 output:
-  html_document:
-    df_print: paged
+  pdf_document: default
   word_document:
     fig_height: 12
     fig_width: 12
-  pdf_document: default
+  html_document:
+    df_print: paged
 editor_options:
   chunk_output_type: console
 ---
@@ -139,7 +139,7 @@ p_power + geom_hline(yintercept = 0.8, linetype = 2, color = 'red') + geom_vline
 
 ```
 
-> Test 1: Simulate and compare the power curves and estimate minimal _N_ for $\sigma = 15$ and $\sigma = 3$.
+> Exercise 1: Simulate and compare the power curves and estimate minimal _N_ for $\sigma = 15$ and $\sigma = 3$.
 
 Of course, power depends on the effect size which (if we use Cohen's _d_) is just a ratio of mean and SD. So for this example, we used small to medium effect size. We can check how the power differs for different effect sizes.  
 
@@ -243,7 +243,7 @@ anovapower_res <- plot_power((ANOVA_design('3b', 30, means, sds)), alpha_level =
 anovapower_res$power_df[anovapower_res$power_df$a>=80,][1,]
 ```
 
-> Test 2: Simulate and compare the power curves and estimate minimal N for a two-sample t-test with $\mu = 5$, $\sigma = 10$ and $\mu = 15$, $\sigma = 10$.
+> Exercise 2: Simulate and compare the power curves and estimate minimal N for a two-sample t-test with $\mu = 5$, $\sigma = 10$ and $\mu = 15$, $\sigma = 10$.
 
 ```{r, two_sample_t}
 group_labels <- c('A','B')
@@ -434,7 +434,7 @@ ggplot(sim_dt_by_trial_avg, aes(x = n_trials_f, color = factor(n_subjects), y = 
 
 Depending on between- and within-subject variability, trial number can be more or less important compared to the sample size.  In the current data,  power plateaued at about 20 trials in the smaller condition.  
 
-> Test 3: Read the data from Raifei et al. (2020) study (`Raifei_2020_simplified.csv`) and estimate the power for 10, 20, 40, and 100 subjects for the average trial N from 100 to 500 in steps of 100 (in both conditions). 
+> Exercise 3: Read the data from Raifei et al. (2020) study (`Raifei_2020_simplified.csv`) and estimate the power for 10, 20, 40, and 100 subjects for the average trial N from 100 to 500 in steps of 100 (in both conditions). 
 
 Raifei et al. (2020, https://psyarxiv.com/m79nu/) estimated biases in perceived orientation of visual search targets as a function of distractor orientation (clockwise or counterclockwise relative to the target) among other questions 
 
